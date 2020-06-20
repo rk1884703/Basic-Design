@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<meta  charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+	<title>Design 1</title>
+</head>
+<style type="text/css">
+	main{
+		display: flex;
+		flex-wrap: wrap;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.left{
+		flex: 25%;
+		background-color: #e0ebeb;
+		overflow: hidden;
+	}
+	.left a{
+		display: block;
+		text-decoration: none;
+		color: #0a0f0f;
+		text-align: center;
+		font-size: 1.5vw;
+		padding: 20px;
+		transition: background linear 1s;
+	}
+	.left a:hover{
+		background: #3d5c5c;
+		color: white;
+	}
+	.right{
+		flex: 75%;
+	}
+	.below{
+		padding: 10px;
+	}
+	.a, .x{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 30px 0px;
+	}
+	.b , .y{
+		flex: 60%;
+	}
+	.fakeimg2, .fakeimg1{
+		flex:40%;
+		text-align: center;
+		background: #d1e0e0;
+		font-size: 1.5vw;
+	}
+	.hide{
+		display:none;
+	}
+	header{
+		text-align: center;
+		background: #00ffaa;
+		color: white;
+		padding: 80px;
+		font-size: 1.5vw;
+	}
+	p,h2{
+		font-size: 1.2vw;
+	}
+	footer{
+		text-align: center;
+		background: #4ddbff;
+		padding:30px;
+		font-size: 2vw;
+	}
+	@media screen and (max-width: 700px){
+		main{
+			display: block;
+			flex-wrap: nowrap;
+		}
+		.left{
+			display: none;
+		}
+		.hide{
+			display:block;
+			overflow: hidden;
+			background: #0a0a0f;
+		}
+		.hide a{
+			display:block;
+			color: white;
+			text-decoration: none;
+			text-align: none;
+			float: left;
+			padding:  16px;
+			transition: background linear 1s;
+		}
+		.hide a.last{
+			float: right;
+		}
+		.hide a:hover{
+			background: #ccffff;
+			color: black;
+		}
+	}
+	@media screen and (max-height: 400px){
+		.hide a{
+			float: none;
+			width: 100%;
+		}
+		.hide a.last{
+			float: none;
+		}
+		.a , .x{
+			display: block;
+			flex-wrap: nowrap;
+		}
+	}
+</style>
+<body>
+	<main>
+	<aside class="left">
+		<nav>
+			<a href="#">Link</a>
+			<a href="#">Link</a>
+			<a href="#">Link</a>
+			<a href="#" >Link</a>
+		</nav>
+	</aside>
+	<div class="right">
+	<header>
+		<h1>My Responsive website</h1>
+	</header>
+	<nav class="hide">
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+		<a href="#" class='last'>Link</a>
+	</nav>
+	<div class="below">
+	<div>
+		<h2>Some heading</h2>
+		<p>Some content............. some more content......................... and some more and more content..................................................................</p>
+	</div>
+	<div class="x">
+		<div class="y">
+		<h2>One more heading</h2>
+		<p>Your choice what you want to write......................Some more content.......................................................................</p>
+		</div>
+		<div class="fakeimg1" style="height: 150px;">
+			Image
+		</div>
+	</div>
+	<div class="a">
+		<div class="fakeimg2" style='height: 150px;'>
+			Image
+		</div>
+		<div class="b">
+		<h2>One More heading</h2>
+		<p> Some more and more and .............................more and more content , i don't know how much content.</p>
+		</div>
+		
+	</div>
+	</div>
+	</main>
+	</div>
+	<footer style="height: 70px;">
+		Footer
+	</footer>
+</body>
+</html>
